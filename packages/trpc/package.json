@@ -1,0 +1,14 @@
+{
+  "name": "@ucr/trpc",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/app-router.ts"
+  },
+  "dependencies": {
+    "@trpc/server": "11.0.0-next-beta.318",
+    "@ucr/backend": "workspace:*",
+    "superjson": "2.2.1"
+  }
+}
