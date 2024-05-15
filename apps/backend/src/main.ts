@@ -1,14 +1,7 @@
 import http from "node:http";
 import os from "node:os";
 import { createHTTPHandler } from "@trpc/server/adapters/standalone";
-import { createTRPCContext, createTRPCRouter } from "./trpc";
-import { healthEndpoint } from "./router/health";
-import { ucrRouter } from "./router/ucr";
-
-export const appRouter = createTRPCRouter({
-  health: healthEndpoint,
-  ucr: ucrRouter,
-});
+import { appRouter, createTRPCContext } from "@ucr/trpc";
 
 // Get the private IP of the machine
 function getPrivateIP() {

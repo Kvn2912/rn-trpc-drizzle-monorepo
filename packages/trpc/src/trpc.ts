@@ -1,11 +1,7 @@
 import { initTRPC } from "@trpc/server";
-import { ZodError } from "zod";
 import superjson from "superjson";
-import { dbClient } from "@ucr/db-client";
-
-export const createTRPCContext = async () => {
-  return { dbClient };
-};
+import type { createTRPCContext } from "./app-router";
+import { ZodError } from "zod";
 
 const t = initTRPC.context<typeof createTRPCContext>().create({
   transformer: superjson,
