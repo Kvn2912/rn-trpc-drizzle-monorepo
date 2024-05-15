@@ -1,9 +1,6 @@
 {
   "name": "@ucr/backend",
   "version": "1.0.0",
-  "exports": {
-    "./app-router": "./src/main.ts"
-  },
   "scripts": {
     "dev": "tsx watch --env-file=.env.dev src/main.ts"
   },
